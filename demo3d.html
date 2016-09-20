@@ -32,8 +32,8 @@ body {
 <script src='perlin.js'></script>
 <script>
 var canvas = document.getElementsByTagName('canvas')[0];
-canvas.width = 1024;
-canvas.height = 768;
+canvas.width = 1920;
+canvas.height = 1080;
 
 var ctx = canvas.getContext('2d');
 
@@ -55,7 +55,7 @@ function drawFrame() {
 
   for (var x = 0; x < cWidth; x++) {
     for (var y = 0; y < cHeight; y++) {
-      var value = noisefn(x / 50, y / 50, height);
+      var value = noisefn(x / 100, y / 100, height);
 
       if (max < value) max = value;
       if (min > value) min = value;
@@ -64,7 +64,7 @@ function drawFrame() {
 
       var cell = (x + y * cWidth) * 4;
       data[cell] = data[cell + 1] = data[cell + 2] = value;
-      //data[cell] += Math.max(0, (25 - value) * 8);
+      data[cell] += Math.max(0, (25 - value) * 8);
       data[cell + 3] = 255; // alpha.
     }
   }
