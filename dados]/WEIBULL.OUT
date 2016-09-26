@@ -1,0 +1,46 @@
+
+	Distribution Summary
+
+Distribution:	Weibull      
+Expression:	229 + WEIB(91.3, 1.18)
+Square Error:	0.009626
+
+Chi Square Test
+  Number of intervals	= 5
+  Degrees of freedom 	= 2
+  Test Statistic     	= 11.8
+  Corresponding p-value	< 0.005
+
+Kolmogorov-Smirnov Test
+  Test Statistic	= 0.0942
+  Corresponding p-value	> 0.15
+
+	Data Summary
+
+Number of Data Points	= 100
+Min Data Value       	= 229
+Max Data Value       	= 634
+Sample Mean          	= 316
+Sample Std Dev       	= 72.6
+
+	Histogram Summary
+
+Histogram Range    	= 229 to 634
+Number of Intervals	= 10
+
+
+==================================================================
+Int.   No. of               Probability           Cumulative      
+No.    Data Pts.   x        Density               Distribution    
+------------------------------------------------------------------
+                            Data   Function       Data   Function   
+   0    27       269.      0.270      0.318      0.270      0.318
+   1    30       310.      0.300      0.263      0.570      0.580
+   2    22       350.      0.220      0.174      0.790      0.754
+   3    13       391.      0.130      0.107      0.920      0.861
+   4     2       432.     0.0200     0.0625      0.940      0.923
+   5     1       472.     0.0100     0.0354      0.950      0.959
+   6     0       513.      0.000     0.0195      0.950      0.978
+   7     3       553.     0.0300     0.0105      0.980      0.989
+   8     1       594.     0.0100    0.00554      0.990      0.994
+   9     1       634.     0.0100    0.00288       1.00      0.997

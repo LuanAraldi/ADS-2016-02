@@ -1,0 +1,17 @@
+Fit All
+
+Document:  C:\Users\Usuario\Desktop\-1474905731537.txt
+Data File: C:\Users\Usuario\Desktop\-1474905731537.txt
+
+
+Function       Sq Error
+-----------------------
+Weibull        0.00963
+Gamma          0.0126
+Beta           0.0195
+Erlang         0.0248
+Exponential    0.0248
+Normal         0.0326
+Lognormal      0.0568
+Triangular     0.0875
+Uniform        0.13

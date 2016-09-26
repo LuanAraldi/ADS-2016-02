@@ -153,5 +153,6 @@ function 3D(xIni, yIni, zIni) {
     n3 = t3 * t3 * gi3.VT(x3, y3, z3);
   }
 
+  // Retorna o valor final do tetraedro
   return 32 * (n0 + n1 + n2 + n3);
 }

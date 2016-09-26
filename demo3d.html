@@ -30,10 +30,11 @@ body {
 </style>
 <div class='centerbox'><canvas></canvas></div>
 <script src='perlin.js'></script>
+
 <script>
 var canvas = document.getElementsByTagName('canvas')[0];
-canvas.width = 1920;
-canvas.height = 1080;
+canvas.width = 1024;
+canvas.height = 768;
 
 var ctx = canvas.getContext('2d');
 
@@ -45,13 +46,15 @@ var height = 0;
 var fn = 'simplex'
 
 function drawFrame() {
+  for (var i = 0; i < 100; i++) {
+    100
   var start = Date.now();
   // Cache width and height values for the canvas.
   var cWidth = canvas.width;
   var cHeight = canvas.height;
 
   var max = -Infinity, min = Infinity;
-  var noisefn = fn === 'simplex' ? noise.simplex3 : noise.perlin3;
+  var noisefn = noise.simplex3;
 
   for (var x = 0; x < cWidth; x++) {
     for (var y = 0; y < cHeight; y++) {
@@ -77,14 +80,12 @@ function drawFrame() {
 
   ctx.font = '16px sans-serif'
   ctx.textAlign = 'center';
-  ctx.fillText(fn + ' rendered in ' + (end - start) + ' ms', cWidth / 2, cHeight - 20);
+  ctx.fillText(fn + ' renderizado em ' + (end - start) + ' ms', cWidth / 2, cHeight - 20);
 
-  if(console) {
-    console.log(fn + ' rendered in ' + (end - start) + ' ms', 'range: ' + min + ' to ' + max);
-  }
+    console.log(fn + ' renderizado em ' + (end - start) + ' ms');
 
   height += 0.05;
-  requestAnimationFrame(drawFrame);
+ }
 }
 
 document.onclick = function() {
@@ -92,6 +93,8 @@ document.onclick = function() {
   fn = fn === 'simplex' ? 'perlin' : 'simplex';
 };
 
-requestAnimationFrame(drawFrame);
+//for (var i = 0; i < 100; i++) {
+  requestAnimationFrame(drawFrame);
+//}
 
 </script>
